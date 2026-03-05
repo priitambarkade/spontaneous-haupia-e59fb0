@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>United International Ltd</title>
+
+<style>
+/* ===== GLOBAL STYLES ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Times New Roman", Times, serif;
+}
+
+body{
+    line-height:1.6;
+}
+
+/* ===== HEADER ===== */
+header{
+    background:#0c000080;
+    color:white;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    height: 19%;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd700;
+}
+
+/* Mobile Menu */
+.menu-toggle{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.726),   /* lower = lighter */
+                rgba(0, 0, 0, 0.3)
+              ),
+              url("img/bg.png"); 
+    height:100vh;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#ffd700;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+/* ===== SECTIONS ===== */
+section{
+    padding:80px 50px;
+}
+
+.container{
+    background:#0c000080;
+    max-width:1200px;
+    margin:auto;
+    border-radius:8px;
+    color: #ffffff;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#0b3d91;
+}
+
+/* ===== PRODUCTS ===== */
+.products{
+    background-image: url(C:\Users\siya\Documents\uiltd\html\img\bg.png);
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+
+.card1{
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.726)   /* lower = lighter */
+              ); 
+    background-size:cover;
+
+
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+    transition:0.3s;
+    font-family: 'Times New Roman', Times, serif;
+    color:aliceblue ;
+}
+
+.card1:hover{
+    transform:translateY(-5px);
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.726),   /* lower = lighter */
+                rgba(0, 0, 0, 0.3)
+              ); 
+    color:rgb(0, 0, 0) ;
+}
+
+.card2{
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.726)   /* lower = lighter */
+              ); 
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+    transition:0.3s;
+    color:aliceblue ;
+
+}
+
+.card2:hover{
+    transform:translateY(-5px);
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.726),   /* lower = lighter */
+                rgba(0, 0, 0, 0.3)
+              ); 
+    color:rgb(0, 0, 0) ;
+}
+
+.card3{
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.726)   /* lower = lighter */
+              ); 
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+    transition:0.3s;
+    color:aliceblue ;
+}
+
+.card3:hover{
+    transform:translateY(-5px);
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.726),   /* lower = lighter */
+                rgba(0, 0, 0, 0.3)
+              );
+    color:rgb(0, 0, 0) ;
+}
+
+.card4{
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.726)   /* lower = lighter */
+              ); 
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+    transition:0.3s;
+    color:aliceblue ;
+}
+
+.card4:hover{
+    transform:translateY(-5px);
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.726),   /* lower = lighter */
+                rgba(0, 0, 0, 0.3)
+              ); 
+    color:rgb(0, 0, 0) ;
+}
+
+/* ===== CONTACT ===== */
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+form input, form textarea{
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+form button{
+    padding:12px;
+    background:#0b3d91;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+form button:hover{
+    background:#092c6d;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#0c000080;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    nav ul{
+        flex-direction:column;
+        display:none;
+        background:#0b3d91;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:200px;
+        padding:20px;
+    }
+
+    nav ul.show{
+        display:block;
+    }
+
+    nav ul li{
+        margin:10px 0;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo"><img src="C:\Users\siya\Documents\uiltd\html\img\logo.png" alt="" height="150px" width="100px"></div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div>
+        <h1>Global Supplier of Steel, Aluminium & Industrial Materials</h1>
+        <p>Delivering Quality Industrial Solutions Worldwide</p>
+        <a href="#contact" class="btn">Get Quote</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+        <h2>About Us</h2>
+    <div class="container">
+        <p>
+            United International Ltd is a trusted global supplier of steel, aluminium,
+            and industrial raw materials. We serve infrastructure, oil & gas, EPC,
+            and manufacturing sectors across international markets.
+        </p>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+    <div class="container1">
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="card1">
+                <img src="C:\Users\siya\Documents\uiltd\html\img\coils.png" alt="" height="150px" width="200px">
+                <h3>Carbon Steel</h3>
+                <p>Pipes, Plates, Coils, Structural Steel</p>
+            </div>
+            <div class="card2">
+                <img src="C:\Users\siya\Documents\uiltd\html\img\acp.png" alt="" height="150px" width="200px">
+                <h3>Aluminium</h3>
+                <p>Sheets, Rods, Extrusions</p>
+            </div>
+            <div class="card3">
+                <img src="C:\Users\siya\Documents\uiltd\html\img\ss.png" alt="" height="150px" width="200px">
+                <h3>Stainless Steel</h3>
+                <p>Industrial Grade SS Products</p>
+            </div>
+            <div class="card4">
+                <img src="C:\Users\siya\Documents\uiltd\html\img\chemicals.png" alt="" height="150px" width="200px">
+                <h3>Industrial Chemicals</h3>
+                <p>Specialty and Bulk Chemicals</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+            <h2>Contact Us</h2>
+
+    <div class="container">
+        <p><strong>Address:</strong> Poonam Chambers, B Wing, Dr. Annie Besant Road, Worli, Mumbai - 400018</p>
+    <p><strong>Email:</strong> info@united-international.in</p>
+    <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+        
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2005 United International Ltd | All Rights Reserved</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+function submitForm(event){
+    event.preventDefault();
+    alert("Thank you! Your message has been submitted.");
+}
+</script>
+
+</body>
+</html>
